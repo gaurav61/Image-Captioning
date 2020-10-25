@@ -49,7 +49,7 @@
     img = preprocess_img(img)
     feature_vector = model_new.predict(img)
     feature_vector = feature_vector.reshape((2048,))
-    #print(feature_vector.shape)
     return feature_vector
 
   ```
+  Above we are using a ResNet50 model which is trained on imagenet dataset. The preprocess_img method is reshaping the input image to a 1X224X224X3 image. Then this image is passed to preprocess_input method which does mean subtraction. It is important because ResNet50 is trained on imagenet dataset which is first mean subtracted.
