@@ -28,3 +28,6 @@
 
   The dataset contains "Images" directory which contains all the images.
 
+
+## Image Preprocessing
+  I have used transfer learning to convert any input image of size 224x224x3 to a fixed vector of size 2048. Transfer learning is used to reduce the training time. For transfer learning I have used ResNet50. 
