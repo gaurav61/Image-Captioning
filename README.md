@@ -105,3 +105,10 @@
   inp_img2 = Dense(256,activation='relu')(inp_img1)
   ```
 
+  Final model:-
+  ```
+  decoder1 = add([inp_img2,inp_cap3])
+  decoder2 = Dense(256,activation='relu')(decoder1)
+  outputs = Dense(vocab_size,activation='softmax')(decoder2)
+  model = Model(inputs=[input_img_features,input_captions],outputs=outputs)
+  ```
