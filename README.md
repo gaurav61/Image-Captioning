@@ -75,3 +75,5 @@
     idx_to_word[i+1] = word
 
   ```
+
+  we can summarize the data matrix for one image and its corresponding caption as follows:-
