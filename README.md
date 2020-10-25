@@ -86,3 +86,21 @@
 
   Since we have already created an index for each word, let’s now replace the words with their indices and understand how the data matrix will look like: <br />
   ![Image2](./image3.jpeg) <br />
+
+
+## Training
+  Caption processing pipeline:-
+  ``` 
+  input_captions = Input(shape=(max_len,))
+  inp_cap1 = Embedding(input_dim=vocab_size,output_dim=50,mask_zero=True)(input_captions)
+  inp_cap2 = Dropout(0.3)(inp_cap1)
+  inp_cap3 = LSTM(256)(inp_cap2)
+  ```
+
+  Image processing pipeline:-
+  ```
+  input_img_features = Input(shape=(2048,))
+  inp_img1 = Dropout(0.3)(input_img_features)
+  inp_img2 = Dense(256,activation='relu')(inp_img1)
+  ```
+
