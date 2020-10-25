@@ -33,5 +33,24 @@
 * I have used transfer learning to convert each input image to a fixed vector of size 2048. Transfer learning is used to reduce the training time. For transfer learning I have used ResNet50 trained on imagenet dataset.
 
   ```
-  model = ResNet50(weights="imagenet",input_shape=(224,224,3)) 
+  model = ResNet50(weights="imagenet",input_shape=(224,224,3))
+
+  model_new = Model(model.input,model.layers[-2].output)
+
+
+  def preprocess_img(img):
+    img = image.load_img(img,target_size=(224,224))
+    img = image.img_to_array(img)
+    img = np.expand_dims(img,axis=0)
+    img = preprocess_input(img)
+    return img
+
+  def encode_image(img):
+    img = preprocess_img(img)
+    feature_vector = model_new.predict(img)
+    
+    feature_vector = feature_vector.reshape((2048,))
+    #print(feature_vector.shape)
+    return feature_vector
+
   ```
