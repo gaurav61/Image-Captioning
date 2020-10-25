@@ -81,5 +81,5 @@
   ![Image1](./image1.jpeg) <br />
   As you can observe, multiple training points can be generated from a single image with its single caption by breaking the caption word by word.
 
-  Similarly if we consider both the images and their captions, our data matrix will then look as follows:-
+  Similarly if we consider both the images and their captions, our data matrix will then look as follows:- <br />
   ![Image2](./image2.jpeg) <br />
