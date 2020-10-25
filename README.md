@@ -62,3 +62,16 @@
   print(img) # [0.04154301 0.17076042 0.29278612 ... 0.05089623 0.3132239  0.86007506]
 
   ```
+
+## Caption Preprocessing
+* We start by removing words in the caption which contains special characters. We are also removing words whose frequency is less than certain threshold. Then we are giving a unique number to each word present in the vocabulary as shown below.
+
+  ```
+  word_to_idx = {}
+  idx_to_word = {}
+
+  for i,word in enumerate(total_words):
+    word_to_idx[word] = i+1
+    idx_to_word[i+1] = word
+
+  ```
