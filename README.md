@@ -90,7 +90,7 @@
 
 ## Training
   ![Image4](./image4.jpeg) <br />
-  Caption processing pipeline:-
+  Caption processing pipeline :-
   ``` 
   input_captions = Input(shape=(max_len,))
   inp_cap1 = Embedding(input_dim=vocab_size,output_dim=50,mask_zero=True)(input_captions)
@@ -98,17 +98,36 @@
   inp_cap3 = LSTM(256)(inp_cap2)
   ```
 
-  Image processing pipeline:-
+  Image processing pipeline :-
   ```
   input_img_features = Input(shape=(2048,))
   inp_img1 = Dropout(0.3)(input_img_features)
   inp_img2 = Dense(256,activation='relu')(inp_img1)
   ```
 
-  Final model:-
+  Final model :-
   ```
   decoder1 = add([inp_img2,inp_cap3])
   decoder2 = Dense(256,activation='relu')(decoder1)
   outputs = Dense(vocab_size,activation='softmax')(decoder2)
   model = Model(inputs=[input_img_features,input_captions],outputs=outputs)
+  ```
+## Prediction
+  ```
+    def predict_caption(photo):  
+      in_text = "startseq"
+      for i in range(max_len):
+        sequence = [word_to_idx[w] for w in in_text.split() if w in word_to_idx]
+        sequence = pad_sequences([sequence],maxlen=max_len,padding='post')
+        
+        ypred = model.predict([photo,sequence])
+        ypred = ypred.argmax() #WOrd with max prob always - Greedy Sampling
+        word = idx_to_word[ypred]
+        in_text += (' ' + word)
+        
+        if word == "endseq":
+            break
+      final_caption = in_text.split()[1:-1]
+      final_caption = ' '.join(final_caption)
+      return final_caption
   ```
