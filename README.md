@@ -52,4 +52,13 @@
     return feature_vector
 
   ```
-  Above we are using a ResNet50 model which is trained on imagenet dataset. The preprocess_img method is reshaping the input image to a 1X224X224X3 image. Then this image is passed to preprocess_input method which does mean subtraction. It is important because ResNet50 is trained on imagenet dataset which is first mean subtracted. The encode_image method is calling the preprocess_img method and then passing the preprocessed image to ResNet50 to get a 2048 vectorial representaion of the image.
+  Above we are using a ResNet50 model which is trained on imagenet dataset. The preprocess_img method is reshaping the input image to a 1 X 224 X 224 X 3 image. Then this image is passed to preprocess_input method which does mean subtraction. It is important because ResNet50 is trained on imagenet dataset which is first mean subtracted. The encode_image method is calling the preprocess_img method and then passing the preprocessed image to ResNet50 to get a 2048 vectorial representaion of the image.
+
+
+  ```
+  img = encode_image("PATH_TO_IMAGE")
+  print(img.shape)  # (2048,)
+
+  print(img) # [0.04154301 0.17076042 0.29278612 ... 0.05089623 0.3132239  0.86007506]
+
+  ```
