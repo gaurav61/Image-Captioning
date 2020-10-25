@@ -30,7 +30,7 @@
 
 
 ## Image Preprocessing
-  I have used transfer learning to convert each input image to a fixed vector of size 2048. Transfer learning is used to reduce the training time. For transfer learning I have used ResNet50 trained on imagenet dataset.
+* I have used transfer learning to convert each input image to a fixed vector of size 2048. Transfer learning is used to reduce the training time. For transfer learning I have used ResNet50 trained on imagenet dataset.
 
   ```
   model = ResNet50(weights="imagenet",input_shape=(224,224,3)) 
