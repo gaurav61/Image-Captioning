@@ -85,10 +85,11 @@
   ![Image2](./image2.jpeg) <br />
 
   Since we have already created an index for each word, let’s now replace the words with their indices and understand how the data matrix will look like: <br />
-  ![Image2](./image3.jpeg) <br />
+  ![Image3](./image3.jpeg) <br />
 
 
 ## Training
+  ![Image4](./image4.jpeg) <br />
   Caption processing pipeline:-
   ``` 
   input_captions = Input(shape=(max_len,))
