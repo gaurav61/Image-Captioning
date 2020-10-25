@@ -78,4 +78,5 @@
 
   we can summarize the data matrix for one image and its corresponding caption as follows:-
 
-  ![Image1](./image1.jpeg)
+  ![Image1](./image1.jpeg) <br />
+  As you can observe, multiple training points can be generated from a single image with its single caption by breaking the caption word by word.
