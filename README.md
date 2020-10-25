@@ -77,3 +77,5 @@
   ```
 
   we can summarize the data matrix for one image and its corresponding caption as follows:-
+
+  ![Image1](./image1.jpeg)
