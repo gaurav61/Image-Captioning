@@ -48,7 +48,6 @@
   def encode_image(img):
     img = preprocess_img(img)
     feature_vector = model_new.predict(img)
-    
     feature_vector = feature_vector.reshape((2048,))
     #print(feature_vector.shape)
     return feature_vector
