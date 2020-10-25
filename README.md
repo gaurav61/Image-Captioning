@@ -7,4 +7,11 @@
 
 
 ## Prerequisite
-* Python, Keras, CNN, RNN, Text preprocessing
+* Python
+* Keras
+* CNN
+* RNN
+* Text preprocessing
+
+## DataSet
+* [Flickr 8K DataSet](https://www.kaggle.com/shadabhussain/flickr8k)
