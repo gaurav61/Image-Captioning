@@ -131,3 +131,8 @@
       final_caption = ' '.join(final_caption)
       return final_caption
   ```
+  ![Image5](./image5.png) <br />
+  ![Image6](./image6.png) <br />
+  ![Image7](./image7.png) <br />
+  ![Image8](./image8.png) <br />
+  ![Image9](./image9.png) <br />
