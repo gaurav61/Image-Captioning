@@ -24,4 +24,7 @@
   1000268201_693b08cb0e.jpg#3 A little girl climbing... <br />
   1000268201_693b08cb0e.jpg#4 A little girl ... <br />
   1001773457_577c3a7d70.jpg#0 A black dog ... <br />
-  1001773457_577c3a7d70.jpg#1 A black dog and a ... <br />
+  1001773457_577c3a7d70.jpg#1 A black dog and a ... <br /><br />
+
+  The dataset contains "Images" directory which contains all the images.
+
