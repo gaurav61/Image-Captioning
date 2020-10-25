@@ -16,4 +16,4 @@
 ## DataSet
 * [Flickr 8K DataSet](https://www.kaggle.com/shadabhussain/flickr8k)
 
-  Flickr_TextData
+  The dataset contains "Flickr_TextData" directory which contains "Flickr8k.token.txt". This file gives the mapping between image and its captions. For each image there are 5 captions available.
