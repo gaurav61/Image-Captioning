@@ -83,3 +83,6 @@
 
   Similarly if we consider both the images and their captions, our data matrix will then look as follows:- <br />
   ![Image2](./image2.jpeg) <br />
+
+  Since we have already created an index for each word, let’s now replace the words with their indices and understand how the data matrix will look like: <br />
+  ![Image2](./image3.jpeg) <br />
