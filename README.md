@@ -1,1 +1,1 @@
-# Image-Captioning
+# Image captioning using deep learning
